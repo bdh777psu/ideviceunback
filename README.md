@@ -1,4 +1,4 @@
-# ideviceunback - Decode manifest and copy files in to human readable form from idevicebackup2 output
+# ideviceunback - Decode manifest and copy files into human readable form from ilibmobiledevice's 'idevicebackup2' output
 
 Since iOS 9.3.2 the idevicebackup2 tool has not been able to perform the 'unback' function as Apple removed the facility.
 
@@ -11,11 +11,11 @@ Currently in ALPHA development phase.
 
 1. Clone the project
 
-    $ git clone https://github.com/RemoteCOMDev/monitoring-collector-desktop-macos-ideviceunback.git
+	$ git clone https://github.com/bdh777psu/ideviceunback.git
 
 2. Build it
 
-    $ make
+	$ make
 
 3. Run it!
 
