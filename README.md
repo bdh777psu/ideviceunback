@@ -44,7 +44,7 @@ Prerequisite: Install [Homebrew](https://brew.sh/)<br>
 
 4. With your iDevice plugged in and paired to your Mac, turn OFF backup encryption<br>
    (follow the on-screen password prompts on your iDevice when needed):<br>
-   	$ idevicebackup2 encryption off<br><br>
+   	$ idevicebackup2 encryption off --interactive<br><br>
 
 5. Perform iDevice backup:<br>
    	$ mkdir ~/ideviceprobe/idevicebackup<br>
