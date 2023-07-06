@@ -31,31 +31,36 @@ Prerequisite: Install [Homebrew](https://brew.sh/)<br>
 
 
 1. Install ilibmobiledevice tool and dependencies:<br>
-   $ mkdir -p ~/ideviceprobe/limd-build<br>
-   $ cd ~/ideviceprobe/limd-build<br>
-   $ curl -o ./limd-build-macos.sh -L is.gd/kdT2Nl<br>
-   $ bash ./limd-build-macos.sh -n<br><br>
+   	$ mkdir -p ~/ideviceprobe/limd-build<br>
+	$ cd ~/ideviceprobe/limd-build<br>
+	$ curl -o ./limd-build-macos.sh -L is.gd/kdT2Nl<br>
+	$ bash ./limd-build-macos.sh -n<br><br>
 
 3. Install ideviceunback from this repo:<br>
-   	$ cd ~/ideviceprobe/<br>
+	$ cd ~/ideviceprobe/<br>
 	$ git clone https://github.com/bdh777psu/ideviceunback.git<br>
 	$ cd ~/ideviceprobe/ideviceunback<br>
 	$ make<br><br>
 
 4. With your iDevice plugged in and paired to your Mac, turn OFF backup encryption<br>
-   (follow the on-screen password prompts on your iDevice when needed):<br>
-   	$ idevicebackup2 encryption off --interactive<br><br>
+	$ idevicebackup2 encryption off --interactive<br><br>
 
 5. Perform iDevice backup:<br>
-   	$ mkdir ~/ideviceprobe/idevicebackup<br>
-	$ idevicebackup2 backup --full ~/ideviceprobe/idevicebackup<br><br>
+	$ mkdir ~/ideviceprobe/idevicebackup<br>
+ $ idevicebackup2 backup --full ~/ideviceprobe/idevicebackup<br><br>
 
-6. Unbackup the previous iDevice backup:<br>
+7. Unbackup the previous iDevice backup:<br>
 	$ mkdir ~/ideviceprobe/ideviceunbacked<br>
 	$ cd ~/ideviceprobe/ideviceunback<br>
 	$ ./ideviceunback -v -i ~/ideviceprobe/idevicebackup/* -o ~/ideviceprobe/ideviceunbacked<br><br>
 
-7. Open the un-backedup contents of your iDevice for inspection:<br>
-   	$ open ~/ideviceprobe/ideviceunbacked/<br>
+8. Open the un-backedup contents of your iDevice for inspection:<br>
+   	$ open ~/ideviceprobe/ideviceunbacked<br><br>
 
 
+## Sample exposed data points commonly of interest (results might vary):
+
+Camera Roll: ~/ideviceprobe/ideviceunbacked/Media/DCIM/102APPLE<br>
+Plain SMS messages: ~/ideviceprobe/ideviceunbacked/Library/SMS<br><br>
+
+If searching for data contained in SQLite dbs, [SQLite Pro](https://www.sqlitepro.com/) can be used to browse the file contents.
