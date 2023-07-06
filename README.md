@@ -53,9 +53,9 @@ Prerequisite: Install [Homebrew](https://brew.sh/)<br>
 6. Unbackup the previous iDevice backup:<br>
 	$ mkdir ~/ideviceprobe/ideviceunbacked<br>
 	$ cd ~/ideviceprobe/ideviceunback<br>
-	$ ./ideviceunback -v -i ~/ideviceprobe/idevicebackup/* -o ~/ideviceunbacked<br><br>
+	$ ./ideviceunback -v -i ~/ideviceprobe/idevicebackup/* -o ~/ideviceprobe/ideviceunbacked<br><br>
 
 7. Open the un-backedup contents of your iDevice for inspection:<br>
-   	$ open ~/ideviceunbacked/*<br>
+   	$ open ~/ideviceprobe/ideviceunbacked/*<br>
 
 
